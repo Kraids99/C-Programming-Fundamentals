@@ -1,0 +1,15 @@
+/* ================== GLOBAL STYLES ================== */
+@import url("base.css");
+
+/* ================== HEADER & NAV ================== */
+@import url("header.css");
+@import url("navbar.css");
+
+/* ================== BANNER ================== */
+@import url("banner.css");
+
+/* ================== TESTIMONIAL ================== */
+@import url("testimonial.css");
+
+/* ================== FOOTER ================== */
+@import url("footer.css");

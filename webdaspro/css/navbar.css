@@ -1,0 +1,32 @@
+.navbar {
+  background-color: #0e1525;
+  padding: 10px 100px;
+}
+
+.navbar-content {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  justify-content: center;
+}
+
+.navbar-content li a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 24px;
+  font-family: 'Righteous', sans-serif;
+  transition: 0.3s;
+}
+
+.navbar-content li a:hover
+{
+  color:bisque;
+  font-size: 26px;
+}
+
+.navbar-content li a.active {
+  color: #d14c32;
+  font-weight: bold;
+}
