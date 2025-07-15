@@ -3,9 +3,1192 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Modul Page</title>
+    <link rel="shortcut icon" href="images/Main_Logo.png" />
+    <link href="https://fonts.googleapis.com/css?family=Audiowide|Baloo+Tamma|Kelly+Slab|Neucha|Righteous&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="css/module.css" />
 </head>
 <body>
-    <br>Comming Soon<br>
+    <div class="topbar">
+        <a href="profile.html"><img src="images/Main_Logo.png" class="header-img"/></a>
+        <span class="greet" id="greet"></span>
+        <span class="time" id="time"></span>
+    </div>
+
+    <nav class="navbar">
+        <ul class="navbar-content">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="module.html" class="active">Module</a></li>
+        </ul>
+    </nav>
+
+    <div class="module-section">
+        <center>
+            <h1 style="color: #AF4F41">
+            <span style="color: #273248;">Module</span> Summary</h1>
+        </center>
+        <div class="search-container">
+            <input type="text" id="searchInput" onkeyup="searchModules()" placeholder="Cari modul yang ingin dibaca" title="Type in a name">
+        </div>
+        <p id="noResultMessage" style="display: none; text-align: center; color: red; font-size: 1.2rem; font-weight: bold;">❌ No matching modules found.</p>
+
+    <!-- Modul Container -->
+    <div id="moduleContainer">
+
+        <!-- Modul 1 -->
+        <div class="blog-main" id="module1">
+            <div class="main-part" id="main1">
+                <div class="img-wrapper" id="imgWrapper-1">
+                    <img src="images/flowmeme.jpeg" alt="Flowchart 1" class="modul-img" id="mainImg-1" />
+                </div>
+                <div class="cont-text">
+                    <h2>Modul 1 - Flowchart 1</h2>
+                    
+                    <p>
+                        <span class="judul-sub">Pengenalan Flowchart</span><br>
+                        <strong>Flowchart</strong> berasal dari kata <i>flow</i>, yang berarti alir dan <i>chart</i>, berarti bagan atau diagram.
+                        Flowchart berarti bagan alur yang menggambarkan langkah-langkah, urutan, atau alir dalam menyelesaikan suatu masalah.
+                        Flowchart biasanya disajikan dalam bentuk simbol-simbol grafis yang dimana
+                        <span id="dots-1" style="font-weight: bold">....</span>
+                        <span id="more-1" class="more-content">
+                                setiap simbolnya ditunjukkan dengan panah. Fungsi flowchart adalah memberi gambaran alur program dalam simbol grafis yang mudah dimengerti.
+                            <br><br><img src="images/flow1.1.png" alt="Simbol Flowchart" style="width: 50%;" />
+                            <br>
+                            
+                            <span class="judul-sub">Simbol dalam Flowchart</span><br>
+                                <strong>Simbol</strong> dalam flowchart melambangkan aksi atau proses yang akan dilakukan. Terdapat berbagai macam simbol untuk flowchart, namun pada pratikum ini kita
+                                menggunakan RAPTOR Flowchart Interpreter. Berikut simbol flowchart yang ada didalam raptor, dapat dilihat pada tabel di bawah ini.
+
+                            <br><br><img src="images/flowchar2.jpg" alt="Gambar Flow 1.2" style="width: 50%;" />
+                        </span>
+                        
+                    </p>
+
+                    <button onclick="modulToggle(1)" id="myBtn-1" class="btn-more">Read More</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modul 2 -->
+        <div class="blog-main" id="module2">
+            <div class="main-part" id="main2">
+                <div class="img-wrapper" id="imgWrapper-2">
+                    <img src="images/banner-modul2.jpeg" alt="Flowchart 2" class="modul-img" id="mainImg-2" />
+                </div>
+                <div class="cont-text">
+                    <h2>Modul 2 - Flowchart 2</h2>
+                    
+
+                    <p>
+                        <span class="judul-sub">Pengenalan Flowchart 2</span><br>
+                        <strong>Flowchart 2</strong> kita akan membahas mengenai perulangan. Tentu kita semua tahu apa itu perulangan, perulangan merupakan suatu proses dimana kita dapat mengulang satu atau
+                        beberapa perintah atau eksekusi blok kode tanpa henti, selama kondisi yang dijadikan acuan terpenuhi. Konsep perulangan ini 
+                        <span id="dots-2" style="font-weight: bold">....</span>
+                        <span id="more-2" class="more-content">
+                                dapat banyak kita jumpai dalam kehidupan kita sehari-hari. Kita ambil satu contoh seperti ketika kita berlari menuju garis finish. Kita akan terus melakukan gerakan
+                                mengulang yaitu berlari dan akan berhenti apabila kita mencapai garis finish. Dengan begitu kita dapat menyimpulkan dalam konsep perulangan adalah kita akan terus melakukan gerakan berulang
+                                (berlari) dan akan berhenti apabila kondisi yang dijadikan acuan (melewati garis finish) telah terpenuhi.
+                            
+                            <br><br><span class="judul-sub">Perulangan Dalam Flowchart</span><br>
+                            <b>1. Simbol</b>
+                            <br><br><img src="images/simbol1.jpg" alt="Simbol Flowchart 2" class="modul-img" />
+                            <br>Pada gambar di atas, merupakan simbol dan bentuk dari perulangan yang bersifat default (belum diisi dengan kondisi atau aksi). 
+                            Dari gambar di atas, dapat kita ambil kesimpulan secara singkat bahwa apabila perbandingan kondisi sekarang belum mencapai kondisi pemberhenti, maka akan terus menuju ke alur “yes” dan akan menuju “no” apabila kondisi yang dijadikan pemberhenti telah tercapai. 
+                            Untuk lebih detailnya, akan dibahas pada bagian di bawah.<br>
+                            
+                            <br><b>2. Komponen</b>
+                            <br><br><img src="images/komponen.png" alt="Komponen Flowchart 2" class="modul-img" />
+                            <b><br>A. Kondisi<br></b>
+                            Pada bagian kondisi, akan dilakukan pengecekan apakah hasil dari pengecekan bernilai <b>true/Yes</b> atau <b>false/No</b>. Apabila hasil bernilai <b>true/Yes</b>,
+                            maka perulangan akan terus dilakukan. Dan apabila hasil bernilai <b>false/No</b>, maka perulangan pun akan berhenti.
+                            <br><b><br>B. Aksi<br></b>
+                            Aksi merupakan proses/kegiatan yang akan terus dijalankan selama kondisi perulangan bernilai <b>true/Yes</b>. Dengan kata lain, aksi akan dilakukan apabila program berhasil memasuki perulangan. 
+                            Aksi dapat diletakkan sebelum atau sesuah pengondisian yang akan dijelaskan lebih detail pada <b>jenis perulangan</b>. 
+
+                            <br><br><b>3. Struktur</b>
+                            <br><br><img src="images/struktur.jpg" alt="Struktur Flowchart 2" class="modul-img" />
+                            <br>Merupakan variabel yang mengontrol jalannya perulangan, dimana setiap putaran perulangan variabel kontrol akan melakukan pengecekan kondisi apakah
+                            perulangan bernilai <b>true/false</b>. Variable kontrol memiliki value awal sebagai
+                            mulainya sebuah perulangan. Dengan begitu, kita perlu <b>melakukan inisialisasi</b>
+                            pada variable kontrol untuk memulai suatu perulangan.
+
+                            <br>
+                            <br><b>Inisialisasi:</b>
+                            <br>Inisialisasi adalah penetapan nilai awal dari suatu varibael, seperti pada contoh disamping nilai awalnya adalah "Ikan hiu makan tomat". 
+
+                            <br> 
+                            <br><b>Input Nilai Variable Pemberhenti:</b>
+                            <br>Meminta inputan nilai dari variable pemberhenti yang berarti perulangan akan dilakukan sebanyak nilai dari variable pemberhenti yang telah diinputkan.
+                            
+                            <br>
+                            <br><b>Pengecekan Kondisi:</b>
+                            <br>Pengecekan kondisi dalam kasus ini yaitu mengecek apakah variable kontrol (n) masih kurang dari variable
+                            pemberhenti (batas). Apabila hasil pengecekan kondisi bernilai <b>true/Yes</b>, maka akan melakukan aksi serta inkremen variable kontrol. Dan apabila bernilai <b>false/No</b>, maka program akan berhenti.
+                            
+                            <br>
+                            <br><b>Inkremen/Dekremen Variable Kontrol:</b>
+                            <br>Penambahan/pengurangan jumlah <b>variable kontrol</b> sesuai dengan yang ditentukan dalam setiap perulangan. Contoh akan diambil berdasarkan flowchart di atas. 
+                            Jika melakukan inkremen, maka akan dilakukan penambahan variable kontrol (n = n+1) dan apabila melakukan <b>dekremen</b>, maka akan dilakukan pengurangan variable kontrol (n = n-1). 
+                            Perlu diingat, nilai dari operasi tidak selalu +1 atau -1, melainkan akan menyesuaikan dengan kebutuhan dalam menjalankan program.
+                           
+                           
+                            <br><br><b>4. Jenis Perulangan</b><br>
+                            <b>A.	Perulangan Do-While (Aksi - Kondisi) / Post-test</b>
+                            <br>Perulangan ini merupakan jenis perulangan dimana proses/aksi akan dijalankan terlebih dahulu dan setelah itu akan dilakukan proses pengecekan kondisi, apakah bernilai <b>true/false</b>. 
+                            Jika bernilai <b>true/Yes</b>, maka akan masuk kembali ke perulangan hingga kondisi mencapai <b>false/No</b>.
+                            Dikerjakan terlebih dahulu, kemudian pengecekan kondisi.
+                            
+                            <br><br><img src="images/do-while.jpg" alt="Gambar Flow 1.2" style="max-width: 50%;"/>
+                            
+                            <br><b>B. Perulangan While-Do (Kondisi - Aksi) / Pre-test</b>
+                            <br>Perulangan ini merupakan jenis perulangan dimana
+                            <b>pengecekan kondisi</b> akan dijalankan terlebih dahulu dan
+                            setelah itu akan dilakukan <b>proses/aksi</b>. Kondisi akan dicek
+                            terlebih dahulu apakah bernilai <b>true/Yes</b> atau <b>false/No</b>.
+                            Apabila kondisi bernilai <b>true/Yes</b>, maka akan masuk ke
+                            dalam perulangan dan melakukan aksi. Apabila tidak
+                            memenuhi kondisi atau bernilai <b>false/No</b>, maka perulangan
+                            tidak akan dilakukan.
+                            <br><br>
+                            <img src="images/while-do.jpg" alt="Gambar Flow 1.2" style="max-width: 50%;"/>
+                            
+                            <br>
+                            <br><b>C. Perulangan For</b>
+                            <br>Merupakan jenis perulangan dimana kita sudah mengetahui berapa kali jumlah perulangan
+                            yang akan dilakukan. Perulangan for wajib menggunakan variabel kontrol serta
+                            menginisialisasi variabel kontrol tersebut. Setelah itu kita juga perlu menentukan apakah kita
+                            akan menggunakan <b>inkremen/dekremen</b> dan jangan lupa memberi pengondisian yang
+                            menentukan kapan perulangan akan berakhir.
+                            <br><br><img src="images/for-in.png" alt="Gambar Flow 1.3" style="max-width: 50%; " />
+                            <img src="images/for-dek.jpg" alt="Gambar Flow 1.4" style="right: auto;" style="max-width: 50%;"/>
+                            <img src="images/outputflow2.jpg" alt="Gambar Flow 1.5" style="right: auto;" style="max-width: 50%;"/>
+                        </span> 
+                    </p>
+                    <button onclick="modulToggle(2)" id="myBtn-2" class="btn-more">Read More</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modul 3 -->
+        <div class="blog-main" id="module3">
+            <div class="main-part" id="main3">
+                <div class="img-wrapper" id="imgWrapper-3">
+                    <img src="images/banner-modul3.jpeg" alt="Tipe Data" class="modul-img" id="mainImg-3" />
+                </div>
+                <div class="cont-text">
+                    <h2>Modul 3 - Tipe Data Penamaan dan Sekuens</h2>
+                    <p>
+                        <span class="judul-sub">Pengelanan Tipe Data Penamaan dan Sekuens</span><br>
+                        <b>Tipe data</b> adalah suatu pengklasifikasian data berdasarkan jenis - jenis data yang tersedia
+                        di dunia nyata dan dapat diaplikasikan ke dalam sebuah wadah bernama <b>Variabel</b>. Tipe data
+                        digunakan untuk compiler dapat menentukan bagaimana data tersebut akan digunakan. Dalam
+                        penggunaan tipe data dapat  
+                        <span id="dots-3" style="font-weight: bold">....</span>
+                        <span id="more-3" class="more-content">
+                        terbagi menjadi dua bagian, yaitu <b>Tipe Data Primitif</b> dan <b>Tipe Data Bentukan</b>.
+                        <br><br><span class="judul-sub">Tipe Data Primitif</span>
+                        <br>    Tipe data ini adalah tipe data dasar yang disediakan bahasa pemrograman yang digunakan
+                        dan paling umum digunakan. Berikut tipe data primitif yang tersedia di bahasa pemrograman C :
+                        <br>
+                            <img src="images/primitif.jpeg" alt="Gambar Flow 1.2" style="max-width: 50%; " />
+                        <br><br><b>1. Integer</b>
+                        <br>Merupakan tipe data yang melambangkan bilangan bulat dalam bahasa C, memakan memory sebanyak 4 bytes per variabel yang menggunakan tipe data ini. Contoh : 1, -1, 123, 0, -124
+                        <br>Terdapat juga tipe data integer yang dapat menyimpan lebih banyak maupun lebih sedikit
+                        dari integer, yaitu :
+                        <br>
+                        <img src="images/intBentukan.jpeg" alt="Gambar Flow 1.2" style="max-width: 50%; " />
+                        <br><br><b>2. Float</b>
+                        <br>Merupakan tipe data yang melambangkan bilangan real pada bahasa C, memakan memory sebanyak 4 bytes per variabel yang menggunakan tipe data ini. Contoh : 1.0, -1.687, 200.35, -1001.102
+                        <br>Terdapat juga tipe data integer yang dapat menyimpan lebih maupun lebih kecil dari integer,
+                        yaitu :<br>
+                        <img src="images/floatbentukan.png" alt="Gambar Flow 1.2" style="max-width: 50%; " />
+                        <br><br><b>3. Character</b>
+                        <br>Merupakan tipe data yang melambangkan suatu character atau alfabet di bahasa C, memakan memory sebanyak 1 bytes per variabel yang menggunakan tipe data ini. Contoh : ‘A’, ‘1’, ‘K’, ‘%’, ‘[‘
+                        <br>Char menggunakan sistem yang bernama kode ASCII untuk menampilkan character yang ditampilkan saat aplikasi berjalan. 
+                        <br>Terdapat juga tipe data integer yang dapat menyimpan lebih maupun lebih kecil dari integer,
+                        yaitu :<br>
+                        <img src="images/charbentukan.jpeg" alt="Gambar Flow 1.2" style="max-width: 50%; " />
+                        <br><br><b>4. Boolean</b>
+                        <br>Merupakan tipe data tambahan dari library stdbool.h perlu menginclude library tersebut untuk menggunakan boolean, namun dapat digantikan dengan 1 dan 0 bila tidak mau menggunakan boolean ini, karena pada dasarnya boolean true dan false adalah 1 dan 0.
+
+                        <br><br><span class="judul-sub">Tipe Data Bentukan</span>
+                        <br>    Merupakan tipe data yang dibentuk oleh programmer sendiri untuk memenuhi suatu
+                        kebutuhan. Tipe data ini merupakan turunan dari tipe data primitif atau tipe data bentukan lainnya.
+                        Tipe data baru ini dapat dibuat dengan keyword <b>typedef</b> atau menambahkan record yang dapat
+                        dibuat dengan keyword <b>struct</b>.
+
+                        <br><br><span class="judul-sub">Variabel</span>
+                        <br>  Merupakan suatu wadah untuk menampung data yang ditentukan oleh tipe data, variabel
+                        ini perlu yang namanya Deklarasi Variabel, yaitu proses memperkenalkan / pembuatan.
+                        Pendeklarasian variabel dapat dilakukan dengan mengetikan tipe data terlebih dahulu lalu nama
+                        variabel yang diinginkan. Contoh :<br>
+                        <img src="images/variabel1.jpg" alt="Gambar Flow 1.2" style="max-width: 50%; " />
+                        <br><br>Untuk pengaksesan suatu tipe data bentukan masih sama sesuai dengan tipe data primitif yang dipakai saat membuat suatu tipe data bentukan baru tersebut, namun <b>khusus string</b> menggunakan <b>format specifier “ %s ” untuk menampilkan kalimat</b> yang sudah di simpan pada string tersebut.
+                        Setelah deklarasi variabel kita dapat melakukan <b>inisialisasi, assignment, operasi</b> pada variabel tersebut dan <b>menampilkani</b> isi variabel. Contoh :
+                        <br>
+                        <img src="images/variabel2.jpg" alt="Gambar Flow 1.2" style="max-width: 50%; " />
+
+                        <br><br>Variabel juga dapat <b>diinputkan</b> oleh user pengguna program dengan menggunakan fungsi scanf atau gets, fungsi scanf ini berguna untuk meminta inputan ke pengguna yang akan dibaca melalui terminal dan akan menyimpan ke suatu variabel yang mau dituju. Contoh :
+                        <br>
+                        <img src="images/variabel3.jpg" alt="Gambar Flow 1.2" style="max-width: 50%; " />
+
+                        <br><br><span class="judul-sub">Penamaan</span>
+                        <br>Seperti arti dari kata tersebut, memberi nama. Pada pemrograman digunakan pada berbagai objek yang tersedia dalam program. Nama tersebut hanya dapat diberikan pada <b>Variabel, Konstanta, Tipe Data Bentukan, Prosedur, Fungsi</b>.
+                        <br>
+                        <img src="images/variabel4.jpg" alt="Gambar Flow 1.2" style="max-width: 50%; " />
+
+                        <br><br><span class="judul-sub">Aturan Penulisan Nama pada C :</span>
+                        <br>1. Case sensitive (dibedakan berdasarkan uppercase dan lowercase)
+                        <br>2. Karakter pertama variabel harus dimulai dengan <b>huruf abjad (a - z) atau underscore (_),</b>
+                        <br>3. Karakter yang diperbolehkan dalam sebuah nama adalah <b>huruf abjad, underscore, dan angka,</b>
+                        <br>4. Nama tidak boleh dipisahkan dengan spasi,
+                        <br>5. Beberapa compiler C membatasi panjang variable maksimal 31 karakter, sehingga sebaiknya tidak menulis nama variable lebih dari 31 karakter.
+                        <br>6. Nama variable harus selain dari keyword <b>(int, float, main, dll)</b>
+                        <br>Selain aturan penulisan diatas, hal lain juga perlu diperhatikan adalah kejelasan dan makna suatu nama variabel yang dinamai. Contoh nilaiDasarPemrograman lebih mudah dipahami oleh orang lain dibandingkan dengan nDP.
+                        <br><br>Contoh penamaan yang salah : 
+                        <br>1. return
+                        <br>2. 10Siswi
+                        <br>3. Nilai Dasar Pemrograman
+                        <br>4. Ekonomi;Geofisika
+                        <br>5. B
+                        <br><br>Contoh penamaan yang benar :
+                        <br>1. siswi_10
+                        <br>2. nilaiDasarPemrograman
+                        <br>3. ekonomiGeofisika
+                        <br>4. password_siswa
+                        <br>5. luas_lingkaran
+
+                        <br><br><span class="judul-sub">Assignment, Inisialisasi, Ekspresi Aritmatika dan Ekspresi Relasional</span>
+                        <br>  Seperti yang sudah disinggung dalam penjelasan variabel, <b>assignment</b> adalah suatu proses pemberian nilai terhadap suatu variabel. Jika suatu variabel dideklarasikan dan dilakukan proses assignment maka disebut dengan 
+                        <b>inisialisasi</b>. Nilai yang dimasukan kedalam variabel dapat digunakan untuk perhitungan <b>ekpresi aritmatika</b> yang menghasilkan <b>nilai numerik</b>, 
+                        maupun <b>ekspresi relasional</b> yang menghasilkan <b>nilai logika</b>.
+                        <br><br>Contoh assignment :
+                        <br>1.	nilai = 100;
+                        <br>2.	nilaiHuruf = ‘A’;
+                        <br>3.	nama = “Budi”;
+                        <br>4.	rata2 = nilai;
+                        <br>5. npm = 210711227;
+                        <br><br>Contoh ekpresi artimatika serta assignment:
+                        <br>1. a = a + b;
+                        <br>2. jari2 = 3.14 * r * r;
+                        <br>3. tanggal5 = getTanggal(tanggal) * 5;
+                        <br><br>Contoh ekpresi logika :
+                        <br>1.	npm == 210711227; (Jika npm sama, maka true (1), selain itu akan false (0) ),
+                        <br>2.	tahun < 2023; (Jika tahun dibawah 2023 maka true (1), jika sama atau diatas 2023 akan false (0) ),
+                        <br>3.	angka % 2 == 0; (Jika angka habis dibagi 2 maka true (1), jika tidak maka false (0) ).
+
+                        <br><br><span class="judul-sub">Sekuens</span>
+                        <br>  Algoritma adalah sekumpulan instruksi yang dijalankan secara berurutan (sekuensial).
+                        Secara umum aturan sekuens algoritma adalah sebagai berikut :
+                        <br>1. Tiap instruksi dilaksanakan satu persatu dan biasanya tiap instruksi dibaca dari atas ke
+                        bawah dan dari kiri ke kanan,
+                        <br>2. Tiap instruksi dilaksanakan satu kali,
+                        <br>3. Urutan instruksi yang dilaksanakan pemroses sama dengan urutan aksi sebagaimana
+                        tertulis didalam algoritma yang ada, dan
+                        <br>4. Akhir dari instruksi terakhir merupakan akhir algoritma.
+                        <br>Contoh sekuens :
+                        <br>
+                        <img src="images/variabel5.jpg" alt="Gambar Flow 1.2" style="max-width: 50%; " />
+                        <br>Nilai angka1 akan menjadi 6 di saat terjadi operasi aritmatika, dan menampilkan 6, lalu angka2
+                        akan bernilai 4 dikarenakan operasi tersebut terjadi setelah operasi penambahan pertama terjadi,
+                        dan akan menampilkan 4 untuk angka2.
+                        </span>
+                    </p>
+                    <button onclick="modulToggle(3)" id="myBtn-3" class="btn-more">Read More</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modul 4 -->
+        <div class="blog-main" id="module4">
+            <div class="main-part" id="main4">
+                <div class="img-wrapper" id="imgWrapper-4">
+                    <img src="images/modul4.jpeg" alt="Pemilihan" class="modul-img" id="mainImg-4" />
+                </div>
+                <div class="cont-text">
+                    <h2>Modul 4 - Pemilihan</h2>
+                    
+                    <p>
+                        <span class="judul-sub">Pengenalan Pemilihan</span><br>
+                        <b>Pemilihan</b> atau percabangan merupakan sebuah algoritma kondisi yang mana terdapat
+                        persyaratan tertentu yang akan dieksekusi dan memenuhi suatu kondisi, pada umumnya
+                        saat membuat program yang lebih kompleks akan sering menjumpai suatu permasalahan
+                        yang hanya dapat diselesaikan dengan
+                        <span id="dots-4" style="font-weight: bold">....</span>
+                        <span id="more-4" class="more-content">
+                        menggunakan pemilihan/percabangan. Pemilihan sendiri memiliki dua nilai yaitu true dan false, suatu aksi hanya akan dilakukan
+                        jika nilai dari kondisinya bernilai true. Kedua nilai ini juga mempengaruhi bagaimana
+                        nantinya program yang dibuat akan bekerja.
+
+                        <br><br><span class="judul-sub">1. Operator Boolean</span>
+                        <br>Operator Boolean biasanya digunakan untuk membandingkan suatu kondisi/persyaratan
+                        didalam pengkodisian, hasil dari operator Boolean bernilai true atau false. Bentuk
+                        penggunaan dari operator Boolean :
+                        <br>
+                            <img src="images/operator.jpeg" alt="Gambar operator2" style="max-width: 50%; " />
+                        <br><br>Pada pemilihan/percabangan terdapat 3 jenis umum pemilihan yaitu IF-ELSE, SWITCH, dan Operator Ternary.
+
+                        <br><span class="judul-sub">A. IF-ELSE</span>
+                        <br>
+                        <img src="images/ifkondisi.png" alt="Gambar operator2" style="max-width: 50%; " />
+                        
+
+                        <br><br><span class="judul-sub">B.	SWITCH</span>
+                        <br>Jenis pemilihan kedua yaitu switch case yang biasanya digunakan untuk kasus pemilihan yang lebih banyak, dan juga agar baris kode yang dibuat lebih sederhana dan rapi. 
+                        Switch case ini sering juga digunakan untuk membuat menu-menu pada program yang menggunakan inputan integer maupun character.
+                        <br>
+                        <img src="images/if1.png" alt="Gambar switch" style="max-width: 50%; " />
+                        <br>Pada switch, kondisi dari sebuah percabangan terletak setelah ‘case’, pada contoh diatas aksi akan diajalankan jika nilai dari sebuah variable menunjukkan angka 1 atau 2 dan jika kedua nilai itu tidak terpenuhi maka aksi default akan dijalankan, default berarti else. Break pada pemilihan switch berfungsi untuk memaksa program keluar dari suatu kondisi pada pemilihan agar aksi pada kondisi selanjutnya tidak tereksekusi.
+                        
+                        <br><br><span class="judul-sub">C.	Operator Ternary</span>
+                        <br>Operator ternary atau conditional operator adalah operator yang digunakan untuk membuat keputusan dalam satu baris kode. Operator ini memiliki tiga operand, dan digunakan untuk melakukan evaluasi suatu kondisi, kemudian menghasilkan nilai berdasarkan kondisi tersebut.
+                        Jika kondisi bernilai true, maka nilai1 akan dihasilkan, sedangkan jika kondisi bernilai nilai2 akan dihasilkan. Contoh:
+                        <br>
+                        <img src="images/ternary1.png" alt="Gambar operator2" style="max-width: 50%; " />
+                        </br>
+
+                        <br><span class="judul-sub">2. String</span>
+                        <br>Pada Bahasa pemograman C tipe data string merupakan tipe data bentukan, dimana dibentuk dari tipe data char dengan mendeklarasikan typedef char string[<max karakter>] di header. Pada pemilihan akan erat kaitannya dengan suatu pengkondisian bertipe data string, namun untuk bisa menggunakan fungsi-fungsi yang akan membantu dalam perbandingan didalam pengkondisian ini perlu memanggil library #include string.h pada header. Didalam library ini terdapat beberapa fungsi yaitu strcpy, strlen, strcmp dan strcmpi.
+                        <br>
+                            <img src="images/string.png" alt="Gambar operator2" style="max-width: 50%; " />
+                        <br><br><b>1. STRCPY</b>
+                        <br>Fungsi strcpy merupakan string copy, yang berfungsi untuk menyalin sebuah string kedalam suatu variabel diruas kirinya. Seperti contoh di atas menyalin nilai dari variabelB kedalam variabelA dan memasukan string “Pemilihan” kedalam variabelA.
+                        <br>
+                            <img src="images/cpy.png" alt="Gambar operator2" style="max-width: 50%; " />
+                        
+
+                        <br><br><b>2. STRLEN</b>
+                        <br>Fungsi strcpy merupakan string copy, yang berfungsi untuk menyalin sebuah string kedalam suatu variabel diruas kirinya. Seperti contoh di atas menyalin nilai dari variabelB kedalam variabelA dan memasukan string “Pemilihan” kedalam variabelA.
+                        <br>
+                            <img src="images/cpy.png" alt="Gambar operator2" style="max-width: 50%; " />
+                        <br>Fungsi strlen merupakan string length, yang berfungsi untuk mengetahui berapa jumlah karakter yang terdapat dalam sebuah string atau variabel dengan tipe data string. Penggunaan fungsi strlen ini akan jauh lebih efektif jika menempel pada suatu variabel / dijadikan sebagai kondisi pada pemilihan.
+
+                        <br><br><b>3. STRCMP & STRCMPI</b>
+                        <br>
+                            <img src="images/cpm-cmpi.png" alt="Gambar operator2" style="max-width: 50%; " />
+                        <br>Fungsi strcmp dan strcmpi sama-sama berfungsi untuk membandingkan dua buah string. Strcmpi merupakan string compare insensitive dimana fungsi ini akan menganggap kedua string sama jika semua karakter di variabel kata1 dan kata2 identik, tidak peduli dengan huruf kapital atau tidak. Sedangkan strcmp merupakan 
+                        string compare dengan case sensitive, artinya fungsi akan menganggap kedua string sama / true jika semua karakter benar-benar identik termasuk memperhatikan huruf kapitalnya. Kedua fungsi ini sering digunakan sebagai kondisi di perulangan. Seperti contoh diatas akan mengeluarkan output “Kedua kata sama” karena menggunakan case insensitive yaitu strcmpi. Dan jika menggunakan strcmp maka program akan mengeluarkan output kedua kata berbeda.
+                        <br><br><img src="images/strcmp.png" alt="Gambar operator2" style="max-width: 50%; " />
+                        <br>Akan bernilai True jika variabelA dan variabelPembanding memiliki isi string yang sama.
+                        <br>
+                        <br><img src="images/cmp2.png" alt="Gambar operator2" style="max-width: 50%; " />
+                        <br>Akan bernilai True jika variabelA dan variabelPembanding memiliki isi string yang berbeda.
+
+                        
+                        </span>
+                        
+                    </p>
+
+                    <button onclick="modulToggle(4)" id="myBtn-4" class="btn-more">Read More</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modul 5 -->
+        <div class="blog-main" id="module5">
+            <div class="main-part" id="main5">
+                <div class="img-wrapper" id="imgWrapper-5">
+                    <img src="images/banner-modul5.jpeg" alt="Perulangan 1" class="modul-img" id="mainImg-5" />
+                </div>
+                <div class="cont-text">
+                    <h2>Modul 5 - Perulangan 1</h2>
+                    
+                    <p>
+                        <span class="judul-sub">Pengenalan Perulangan 1</span><br>
+                        <b>Perulangan</b> atau umumnya disebut dengan Loop, adalah sebuah teknik yang
+                        memungkinkan program untuk menjalankan serangkaian perintah secara berulang sampai
+                        suatu kondisi tertentu telah berhasil dicapai. Hal ini memungkinkan kita untuk menulis kode
+                        program yang  
+                        <span id="dots-5" style="font-weight: bold">....</span>
+                        <span id="more-5" class="more-content">
+                            lebih efisien dan lebih mudah dibaca.
+                            <br><br><b>Contoh:</b>
+                            <br>Saya ingin menampilkan output kata “DasPro” sebanyak 50 kali. Saya bisa saja menulis  <i>printf(“DasPro”)</i> sebanyak 50x, 
+                            tetapi cara itu tidak efektif dan memakan waktu yang banyak, sehingga untuk mengatasi hal itu kita perlu menggunakan perulangan atau 
+                            loop sehingga kita bisa menulis kode seperti dibawah ini.
+                            <br>
+                                <img src="images/perulangan1.1.jpg" alt="Perulangan 1.1" >
+                            <br><br>
+                            <span class="judul-sub">A. Kelompok Perulangan</span></b>
+                            <br><b>1. Counted Loop (Perulangan Terhitung) : </b>Perulangan yang sudah pasti dan sudah ditentukan sebelumnya berapa jumlahm perulangan yang akan dijalankan oleh program.
+                            <br><br><b>2.	Uncounted Loop (Perulangan Tidak Terhitung) : </b>Perulangan yang akan terus berulang sampai kondisi tertentu terpenuhi sehingga tidak
+                            diketahui pasti seberapa banyak perulangan yang akan dijalankan program dari awal.
+                            
+                            <br><br><span class="judul-sub">B.	Komponen Perulangan</span></b>
+                            <br><b>1.	Inisialisasi :</b> Penentuan awal variabel kontrol.
+                            Variabel kontrol adalah variabel yang digunakan sebagai pengatur/pengendali
+                                perulangan dan harus mulai dari suatu nilai tertentu.
+                            <br><br><b>2.	Kondisi :</b> Kondisi Ekspresi Boolean (Kondisi terhadap variabel kontrol berupa <b>true / false</b>)
+                            Sebagai contoh, loop akan terus berjalan apabila kondisi masih true dan berhenti ketika kondisi bernilai false.
+                            <br><br><b>3.	Inkremen / Dekremen :</b> Peningkatan / Pengurangan nilai variabel kontrol secara bertahap. Pada setiap perulangan, variabel kontrol akan diinkremen maupun didekremen sesuai kebutuhan.
+                            <br><b>• Inkremen</b>
+                            <br>Proses penambahan nilai pada variabel kontrol. Nantinya nilai ini akan terus  bertambah selama perulangan masih berjalan.
+                            Contoh :
+                            <br>
+                                <img src="images/perulangan1.3.jpg" alt="Perulangan 1.2" style="max-width: 50%; " />
+                            <br>
+
+                            <br><b>• Dekremen</b>
+                            <br>Proses pengurangan nilai pada variabel kontrol. Maka, nilai dari
+                            variabel kontrol akan berkurang selama perulangan masih berjalan.
+                                Contoh :          
+                            <br>
+                                <img src="images/perulangan1.2.jpg" alt="Perulangan 1.2" style="max-width: 100%; " />
+                            <br>
+                            <br><b>4. Statement : </b>Perintah yang di loop dalam suatu perulangan.
+                            <br><br><b>5. Terminasi : </b>Sebuah perintah yang dapat mengakhiri suatu perulangan, atau menyatakan akhir dari suatu perulangan <b>(bersifat opsional)</b>.
+                            
+                            
+                            <br><br><span class="judul-sub">C.	Jenis Perulangan</span></b>
+                            <br><b>1.	For Loop (Counted Loop)</b>
+                            <br>Perulangan “For” merupakan perulangan yang termasuk dalam <b>counted loop</b>, hal ini karena jumlah perulangan yang akan dijalankan program sudah ditentukan dari awal. 
+                            Pertama-tama, inisialisasikan sebuah nilai terlebih dahulu, kemudian dilanjut dengan menulis kondisi perulangan. Lalu, tentukan apakah nilai inisialisasi akan diinkremen atau didekremen. 
+                            Langkah terakhir adalah mengisi statement dengan aksi yang akan diulang-ulang oleh program dan diakhiri dengan terminasi <b>(opsional)</b>.
+                            <br><b>Struktur</b>
+                            <br>
+                                <img src="images/Per1.png" alt="Perulangan 1.2" style="max-width: 50%; " />
+                            <br><br><b>Contoh Code:</b>
+                            <br>
+                                <img src="images/perulangan1.4.jpg" alt="Perulangan 1.2" style="max-width: 50%; " />
+                            <br><br><b>Alur Program:</b>
+                            <br>1) [ 1 - 2 – 4 – 3 ] : Cek kondisi 0 < 5 <b>(True)</b>, lalu inkremen variabel i.
+                            <br>2) [ 2 – 4 – 3 ] : Cek kondisi 1 < 5 <b>(True)</b>, lalu inkremen variabel i.
+                            <br>3) [ 2 – 4 – 3 ] : Cek kondisi 2 < 5 <b>(True)</b>, lalu inkremen variabel i.
+                            <br>4) [ 2 – 4 – 3 ] : Cek kondisi 3 < 5 <b>(True)</b>, lalu inkremen variabel i.
+                            <br>5) [ 2 – 4 – 3 ] : Cek kondisi 4 < 5 <b>(True)</b>, lalu inkremen variabel i.
+                            <br>6) [ 2 – 5 ] : Cek kondisi 5 <span 5 <b>(False)</b>, maka loop berhenti 
+                            <br><br><b>Output Program:</b>
+                            <br>
+                                <img src="images/perulangan1.5.jpg" alt="Perulangan 1.2" style="max-width: 50%; " />
+                            <br>
+
+                            <br><b>2.	While Loop (Uncounted Loop)</b>
+                            <br>Perulangan “While” termasuk ke dalam <b>uncounted loop</b>. Hal ini karena belum diketahui berapa kali program akan menjalankan perulangan. Pada perulangan while,
+                            nilai inisialisasi / variabel kontrol akan dicek terlebih dahulu. Jika variabel control tidak memenuhi kondisi (False), maka program akan langsung keluar dari loop tersebut. Dengan kata lain, selama variabel kontrol memenuhi kondisi (True), perulangan  akan terus menerus dijalankan oleh program.
+                            <br><b>Struktur:</b>
+                            <br>
+                                <img src="images/perulangan1.6.jpg" alt="Gambar Flow 1.3" style="max-width: 50%; " />
+                            </br>
+
+                            <br><b>Contoh Code:</b>
+                            <br>
+                                <img src="images/perulangan1.7.jpg" alt="Gambar Flow 1.3" style="max-width: 50%; " />
+                            <br>
+                            <br><b>Alur Program:</b>
+                            <br>1) [1] Inisialisasi userInput = 5 → Cetak “Hitung mundur dari :”
+                            <br>2) [2] Cek userInput > 0 → Jika benar, lanjut ke langkah 3
+                            <br>3) [4] Cetak nilai userInput
+                            <br>4) [3] Dekremen userInput--
+                            <br>5) [2] Ulangi cek kondisi → jika masih > 0, ulangi langkah 3-4
+                            Jika kondisi userInput > 0 salah, lanjut ke langkah 7
+                            <br>6) [5] Cetak “While loop selesai…”
+                            <br>
+                            <br><b>Output Program:</b>
+                            <br>
+                                <img src="images/perulangan1.8.jpg" alt="Gambar Flow 1.3" style="max-width: 50%; " />
+                            <br>
+
+                            <br><b>3.	Do-While Loop (Uncounted Loop)</b>
+                            <br>Sama halnya dengan perulangan while, perulangan “Do While” juga termasuk dalam <b>uncounted loop</b> untuk alasan yang sama. Jumlah perulangan yang akan dijalankan oleh program sama sekali tidak diketahui dari awal. Perulangan do while akan menjalankan statement terlebih dahulu lalu mengecek kondisi di setiap akhir perulangan. Jika kondisi tidak terpenuhi (False), maka program akan keluar dari loop
+                            tetapi jika kondisi terpenuhi (True) maka program akan terus menjalankan perulangan.Perlu diingat bahwa apapun hasil pengecekan kondisi pada do while loop, program akan tetap menjalankan statement/code minimal 1 kali!
+                            <br><b>Struktur:</b>
+                            <br>
+                                <img src="images/perulangan1.9.jpg" alt="Gambar Flow 1.3" style="max-width: 50%; " />
+                            <br>
+
+                            <br><b>Contoh Code:</b>
+                            <br>
+                                <img src="images/perulangan1.10.jpg" alt="Gambar Flow 1.3" style="max-width: 50%; " />
+                            <br>
+                            <br><b>Alur Program:</b>
+                            <br>1) [ 1 – 4 – 3 – 2 ]
+                                : Menjalankan printf, dekremen variabel userInput, lalu cek kondisi 4 > 0 <b>(True)</b>.
+                                <br>2) [ 4 – 3 – 2 ]
+                                : Menjalankan printf, dekremen variabel userInput, lalu cek kondisi 1 > 0 <b>(True)</b>.
+                                <br>3) [ 4 – 3 – 2 – 5 ]
+                                : Menjalankan printf, dekremen variabel userInput, cek kondisi -2 > 0 <b>(False)</b>,
+                                kemudian loop berhenti.
+                            
+
+                            <br><br><b>Output program:</b>
+                            <br>
+                                <img src="images/perulangan1.11.jpg" alt="Gambar Flow 1.3" style="max-width: 50%; " />
+                            <br>
+                        </span>
+                    </p>
+
+                    <button onclick="modulToggle(5)" id="myBtn-5" class="btn-more">Read More</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modul 6 -->
+        <div class="blog-main" id="module6">
+            <div class="main-part" id="main6">
+                <div class="img-wrapper" id="imgWrapper-6">
+                    <img src="images/banner-modul6.jpeg" alt="Perulangan 2" class="modul-img" id="mainImg-6" />
+                </div>
+                <div class="cont-text">
+                    <h2>Modul 6 - Perulangan 2</h2>
+                    
+                    <p>
+                        <span class="judul-sub">Pengenalan Perulangan 2</span><br>
+                        <b>Nested Loop</b> merupakan struktur perulangan yang berada di dalam perulangan lainnya (loop di dalam loop). 
+                        Perulangan dalam (inner loop) dan perulangan luar (outer loop) dapat berupa jenis apa pun, seperti while loop maupun for loop. 
+                        Berikut merupakan contoh code & hasil run dari Nested Loop sederhana yang     
+                        <span id="dots-6" style="font-weight: bold">....</span>
+                        <span id="more-6" class="more-content">
+                            dapat dilihat pada Gambar 1 dimana digit pertama adalah digit outer loop dan digit kedua adalah digit inner loop.
+                            <br>
+                            <span style="display: block; text-align: center;">
+                                <img src="images/perulangan2.1.png" alt="Perulangan 1.1" style="max-width: 50%;">
+                                <br>Gambar 1 Struktur Perulangan
+                            </span>
+                     
+                            <br>
+                            <br>
+                            <span class="judul-sub">A. Break Statement</span>
+                            <br>Pada Nested Loop, break digunakan untuk melakukan penghentian suatu perulangan
+                            pada suatu keadaan tertentu. Penggunaannya dapat dilihat pada contoh pada Gambar 2 dan Gambar 3, Pernyataan break dapat dieliminasi dengan penambahan kondisi,
+                            sehingga loop dapat berhenti dengan sempurna.              
+                            <br><b>1. Contoh Pertama:</b>
+                            <br>
+                            <span style="display: block; text-align: center;">
+                                <img src="images/perulangan2.3.png" alt="Perulangan 1.1">
+                                <br>Gambar 2 Penerapan Break Statement
+                            </span>
+                            <br><br>Pada Gambar 2, Jika kita input angka 5, maka program akan melakukan printing
+                            angka 1 hingga angka 5 seperti pada Gambar 3. Program berhenti pada angka 5
+                            karena break statement.
+                            <br>
+                            <span style="display: block; text-align: center;">
+                                <img src="images/output3perulangan.png" alt="Perulangan 1.1" style="max-width: 50%;">
+                                <br>Gambar 3 Output break statement
+                            </span>
+
+                            <br><b>2. Contoh Kedua:</b>
+                            <br>Code pada Gambar 4 akan meminta user untuk menginputkan angka terus menerus. Program akan berhenti jika user menginputkan secret number yang benar yang sudah dideklarasikan sebelumnya yaitu angka 8.
+                            <br>
+                            <span style="display: block; text-align: center;">
+                                <img src="images/perulangan2.4.png" alt="Perulangan 1.1" style="max-width: 50%; ">
+                                <br>Gambar 4 Pengkodisian
+                            </span>
+
+                            <br><br><span class="judul-sub">B.	Perumpamaan nested loop</span>
+                            <br>Jika Nested Loop diumpamakan dalam bentuk matriks dengan i sebagai baris dan j
+                            sebagai kolom matriks tersebut. Maka akan terbentuk matriks seperti pada Gambar 5.
+                            <br>
+
+                            <span style="display: block; text-align: center;">
+                                <img src="images/perulangan2.5.png" alt="Perulangan 1.1" style="max-width: 50%; ">
+                                <br>Gambar 5 Perumpaan nested loop
+                            </span>
+
+                            <br><br><span class="judul-sub">C. Contoh Lain Penerapan Nested Loop</span>
+                            <br>1. Nested Loop dengan output angka sesuai banyaknya baris dan kolom seperti pada Gambar 6.
+                            <br>
+
+                            <span style="display: block; text-align: center;">
+                                <img src="images/perulangan2.6.png" alt="Perulangan 1.1" style="max-width: 50%; ">
+                                <br>Gambar 6. Contoh perulangan 1
+                            </span>
+
+                            <br>2. Nested Loop dengan output segitiga dengan tinggi sesuai input seperti pada Gambar 7.
+                            <br>
+
+                            <span style="display: block; text-align: center;">
+                                <img src="images/perulangan2.8.png" alt="Perulangan 1.1" style="max-width: 50%; ">
+                                <br>Gambar 7. Contoh perulangan 2
+                            </span>
+
+                            <br>3. Pembuatan Error handling untuk mendapat input yang diinginkan. Misal jika program menginginkan input dari user berupa angka dari 1-9, maka salah satu cara untuk membuat error handling jika inputan tidak sesuai dengan yang diinginkan user adalah seperti Gambar 8.
+                            <br>
+
+                            <span style="display: block; text-align: center;">
+                                <img src="images/perulangan2.7.png" alt="Perulangan 1.1" style="max-width: 50%; ">
+                                <br>Gambar 8. Contoh error handling sederhana
+                            </span>
+                        </span>
+                        
+                    </p>
+
+                    <button onclick="modulToggle(6)" id="myBtn-6" class="btn-more">Read More</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modul 7 -->
+        <div class="blog-main" id="module7">
+            <div class="main-part" id="main7">
+                <div class="img-wrapper" id="imgWrapper-7">
+                    <img src="images/banner-modul7.jpeg" alt="Prosedur 1" class="modul-img" id="mainImg-7" />
+                </div>
+                <div class="cont-text">
+                    <h2>Modul 7 - Prosedur 1</h2>
+                    
+                    <p>
+                        <span class="judul-sub">Pengenalan Prosedur 1</span><br>
+                        <b>Prosedur</b> adalah sebuah sub program yang berisi segala alur dan logika untuk menjalankan suatu kode tertentu. Prosedur akan membuat progam bisa membagi tugas-tugasnya sesuai dengan keperluannya dan bisa kita panggil ke main program jika dibutuhkan. Prosedur akan sangat berguna 
+                        <span id="dots-7" style="font-weight: bold">....</span>
+                        <span id="more-7" class="more-content">
+                            untuk para programmer jika ingin menjalankan suatu kode yang berulang maupun tidak berulang. Kita tidak perlu menulis ulang kode terebut karena kita hanya perlu memanggil prosedur itu saja untuk menjalankan code yang sama.
+                            <br><br>
+                            <span class="judul-sub">Bagaimanakah Struktur dari Prosedur?</span><br>
+                                <img src="images/Prosedur1.1.png" alt="Gambar Flow 1.2" style="width: 50%;">
+                            <br>1. <b>Nama Prosedur</b> : Nama untuk mengidentifikasi dan memanggil prosedur.
+                            <br>2. <b>Parameter</b> : Informasi / variabel yang dibutuhkan untuk menjalankan aksi suatu prosedur. Ketika prosedur hendak dieksekusi dan parameternya tidak lengkap, maka program akan mengalami error dan tidak bisa dijalankan. Parameter berfungsi untuk memberikan inputan supaya bisa digunakan di dalam prosedur dan bersifat opsional.
+                            <br>3. <b>Body</b> : Isi dari prosedur berupa alur dan logika dari suatu kode.
+                            <br><br><b>Di dalam prosedur sendiri, bentuk parameter dapat berupa : </b>
+                            <br>1. <b>Parameter input</b> : merupakan parameter sebagai masukan atau inputan  ke dalam prosedur untuk menjalankan suatu aksi. 
+                            <br>2. <b>Parameter output</b> : merupakan parameter di dalam prosedur yang nilainya nanti akan dibawa keluar ke dalam variabel yang ada di main program (memiliki ciri khas, yaitu terdapat pointer / asteris “*” yang menempel pada parameter).
+                            <br>
+                            <br>
+                            <span class="judul-sub">Bagaimana cara kita untuk menggunakan prosedur?</span><br>
+                            <b>1. Pendeklarasian Prosedur</b>
+                            <br>
+                                <img src="images/Prosedur1.7.png" alt="Gambar Flow 1.2" style="width: 50%;" >
+                            <br>Pendeklarasian prosedur dapat dilakukan di bagian margin atas pada program (bagian sebelum masuk ke main program). Sebuah prosedur akan tetap berjalan meskipun tidak dideklarasikan. Namun, hal tersebut akan memicu <span style="color: crimson">warning conflicting types</span> karena program tidak menemukan body dari prosedur terkait saat dieksekusi.
+                            <br>
+                            <br>
+                            <b>2. Pendefinisian Prosedur</b><br>
+                                <img src="images/Prosedur1.8.png" alt="Gambar Flow 1.2" style="width: 50%;" >
+                            <br>Pendefinisian prosedur merupakan proses dimana programmer membuat suatu prosedur hingga siap digunakan di main program. Bagian ini akan mendefinisikan prosedur terkait dengan perintah / alur code tertentu sesuai dengan konteks prosedur yang dibuat. Pembuatan pendefinisian prosedur bisa dilakukan di bagian margin bawah pada program (tepat di bawah main program).
+                            <br>
+                            <br>
+                            <b>3. Pemanggilan Prosedur</b>
+                            <br>
+                                <img src="images/Prosedur1.9.png" alt="Gambar Flow 1.2" style="width: 50%;" >
+                            <br>
+                            Pemanggilan prosedur merupakan proses programmer menggunakan / memanggil prosedur yang telah ia buat baik di main program atau pun di prosedur lain.Tentunya prosedur harus kita panggil ke dalam main program supaya perintah di dalam prosedur tersebut dapat dieksekusi oleh main program atau oleh prosedur lain.
+                            <br>
+                            <br>Dalam pemanggilan prosedur terdapat <b>Syarat</b> yang penting, yaitu:
+                            <br>1. <b>Nama Prosedur</b> yang dipanggil harus sama dengan nama prosedur yang telah di deklarasikan dan didefinisikan. 
+                            <br>2. <b>Jumlah Parameter</b> harus sama dengan prosedur yang dipanggil. 
+                            <br>3. <b>Tipe data variabel</b> pada parameter yang ada di main program harus sama dan sesuai dengan penempatannya dengan tipe data variabel pada parameter pada saat prosedur dideklarasikan dan didefinisikan. 
+                            <br>4. Jika Parameter ditempel <b>Asteris / Pointer (*)</b> saat pendeklarasian & pendefinisian, maka saat pemanggilan di parameter tersebut harus ditempel dengan <b>“&”</b>.
+                            <br>
+                            <br>Contoh Penggunaan Prosedur: 
+                            <br>
+                            <img src="images/Prosedur1.10.png" style="width: 90%" alt="Gambar Flow 1.2">
+                            <br>
+                            <br>
+                            <span class="judul-sub">Kategori Prosedur Berdasarkan Parameter</span><br>
+                            <b>1. Naive</b>
+                            <br>
+                                <img src="images/Prosedur1.2.png" alt="Gambar Flow 1.2" style="width: 50%;" >
+                            <br>Prosedur Naive merupakan prosedur yang tidak memiliki parameter sama sekali. Prosedur ini sering dipakai untuk menampilkan menu.
+                                <br>
+                            <br> <b>2. Semi-Naive Input</b>
+                            <br>
+                                <img src="images/Prosedur1.3.png" alt="Gambar Flow 1.2" style="width: 50%; " ><br>
+                            Semi-naive input merupakan prosedur yang hanya memiliki parameter input. Pada kategori prosedur ini,kode inputan akan berada di main program, sedangkan code output akan berada di dalam prosedur.
+                            <br>
+                            <br> <b>3. Semi-Naive Ouput</b><br>
+                                <img src="images/Prosedur1.4.png" alt="Gambar Flow 1.2" style="width: 50%;" >
+                            <br>Semi-Naive Output ini merupakan kebalikan dari prosedur semi-naive input karena hanya memiliki parameter output. Kode inputan akan berada di dalam prosedur, sedangkan code output berada di main program.
+                            <br>
+                            <br> <b>4. Nett Effect</b>
+                            <br>
+                                <img src="images/Prosedur1.5.png" alt="Gambar Flow 1.2" style="width: 50%;" >
+                            <br>
+                        
+                            <br>Nett Effect merupakan prosedur yang tidak menggunakan Standard Input/Output. Kategori prosedur ini merupakan kategori prosedur yang paling direkomendasikan karena menggabungkan keuntungan dari 2 pedekatan lainnya yaitu semi naive input dan semi naive output. Prosedur ini tidak memperbolehkan adanya inputan dan output berbentuk printf atau pun scanf di dalam prosedur (Segala jenis code input & output berada di main program).
+                            <br><br>
+                            <span class="judul-sub">Jenis-Jenis Parameter</span><br>
+                            Parameter pada prosedur dibedakan menjadi 2 jenis, yaitu <b> Prameter Formal</b> dan <b> Prameter Aktual</b>. Parameter Formal merupakan jenis parameter yang letaknya berada di luar main program. Parameter Aktual merupakan jenis parameter yang ada di dalam main program pada saat pemanggilan dilakukan.
+                            <br><br>
+                            Berikut adalah karakteristik dari Parameter Formal dan Parameter Aktual : 
+                            <br>1. Parameter Formal dan Parameter Aktual tidak harus memiliki nama yang sama. 
+                            <br>2. Parameter Formal dan Parameter Aktual harus memiliki tipe data yang sama. 
+                            <br>3. Jumlah Parameter Aktual dan Parameter Formal harus sama. 
+                            <br>4. Urutan Parameter Formal harus sama dengan Parameter Aktual.
+                            <br><br>
+                            <span class="judul-sub">Apa itu Pointer/Asteris(*)?</span><br>
+                            Salah satu ciri khas dari parameter output adalah adanya bintang atau asteris / pointer yang menempel pada parameter formal. Penggunaan asteris / pointer akan membuat variabel pada parameter aktual nilainya ikut berubah menyesuaikan nilai dari variabel pada parameter formal.
+                            <br><br>Berbeda ketika kita tidak menempelkan asteris / pointer pada parameter formal, maka segala perubahan nilai pada parameter formal selama prosedur dieksekusi tidak akan mengakibatkan perubahan pada parameter aktual. Oleh karena itu, ketika ingin mengubah value suatu parameter pada prosedur, diwajibkan untuk menggunakan asteris / pointer pada parameter formal terkait yang ingin datanya diubah. Kita dapat melihat penggunaan Asteris pada gambar dibawah.
+                            <br>
+                            <img src="images/Prosedur1.6.png" style="width: 50%" alt="Gambar Flow 1.2">
+                            <br><br>
+                            <span class="judul-sub">Prosedur Rekrusif</span><br>
+                            Prosedur bisa melakukan perulangan tanpa menerapkan konsep “do-while”,“while”, atau pun “nested loop. Caranya adalah dengan memanggil suatu prosedur ke dalam prosedur lainnya didalam bodynya saat melakukan pendefinisian dan melakukan sedikit perubahan dalam parameternya. Konsep tersebut disebut dengan konsep prosedur rekrusif. Konsep rekrusif memanfaatkan “if-else” sebagai pemberhenti rekrusif dan pengkondisian suatu alur code yang diinginkan. Berikut gambar dibawah merupakan penggunaan prosedur rekrusif beserta ouputnya.
+                            <br>
+                            <img src="images/Prosedur1.11.jpg.png" alt="Gambar Flow 1.2" style="width: 50%">
+                            <br>
+                            <br>
+                            Code di atas merupakan contoh dari implementasi prosedur rekrusif untuk visualisasi segitiga. Bisa dilihat bahwa tidak ada code perulangan sama sekali di code tersebut. Namun, code tersebut akan tetap berjalan dengan semestinya dan berhasil melakukan visualisasi segitiga. Konsep rekrusif memanfaatkan “if-else” sebagai pemberhenti rekrusif dan pengkondisian suatu alur code yang diinginkan.
+
+                        </span>
+                        
+                    </p>
+
+                    <button onclick="modulToggle(7)" id="myBtn-7" class="btn-more">Read More</button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Modul 8 -->
+        <div class="blog-main" id="module8">
+            <div class="main-part" id="main8">
+                <div class="img-wrapper" id="imgWrapper-8">
+                    <img src="images/banner-modul8.jpeg" alt="Prosedur 2" class="modul-img" id="mainImg-8" />
+                </div>
+                <div class="cont-text">
+                    <h2>Modul 8 - Prosedur 2</h2>
+                    
+                    <p>
+                        <span class="judul-sub">Pengenalan Prosedur 2</span><br>
+                        Pada modul sebelumnya kita sudah mempelajari bersama apa itu prosedur, struktur, dan lain sebagainya. Pada modul <b>Prosedur 2</b>, kita akan membahas lebih lanjut mengenai prosedur dan mereview kembali modul sebelumnya. Tujuan utama dalam pembuatan prosedur yaitu untuk  
+                        <span id="dots-8" style="font-weight: bold">....</span>
+                        <span id="more-8" class="more-content">
+                            mengorganisir dan membagi kode menjadi bagian yang lebih kecil dan terorganisir. Selain itu prosedur juga dimanfaatkan untuk melaksanakan program yang akan dijalankan berulang kali.
+                            <br><br>Terdapat beberapa  tahap untuk membuat sebuah prosedur, yaitu :
+                            <br><b>1. Analisis Masalah :</b> 
+                            <br>Dalam analisis masalah, kita harus mengidentifikasi terlebih dahulu masalahnya dan cara untuk menyelesaikannya.
+                            <br><b>2.  Desain Solusi :</b>
+                            <br>Setelah melewati tahap satu atau tahap analisis masalah, kita baru bisa mendesain solusi atau merencanakan urutan instruksi nya dalam menyelesaikan masalah.
+                            <br><b>3. Implementasi :</b>
+                            <br>Pada tahap ini tentu kita sudah tahu masalahnya apa dan telah menemukan solusi, serta mendesain solusinya. Sekarang kita tinggal menerapkan atau mengimplementasikan solusinya  ke dalam bahasa pemogramanan.
+                            <br><br>
+                            <b><span class="judul-sub">Mari kita membahas kembali jenis- jenis parameter</span></b>
+                            <br><b>1. Parameter Input</b>
+                            <br>
+                            <img src="images/Prosedur2.1.png" alt="Gambar Flow 1.2" style="width: 50%;" >
+                            <br>
+                            Parameter input adalah parameter yang isi (value) nya sudah jelas terdefinisi 	ketika pemanggilan prosedur dan isi (value) nya wajib tidak mengalami 	perubahan. Isi (value) dari parameter ini digunakan sebagai inputan untuk 	prosedur.
+                            <br><br> <b>2. Parameter Output</b>
+                            <br>
+                            <img src="images/Prosedur2.2.png" alt="Gambar Flow 1.2" style="width: 50%;" >
+                            <br>
+                            Parameter output adalah Parameter target yang hendak diubah nilainya atau parameter yang menampung hasil keluaran dari prosedur dan mengalami perubahan serta efek netto dari prosedur. Isi dari parameter ini boleh jelas maupun belum jelas. Salah satu ciri khasnya adalah memiliki pointer yang menempel pada nama variabelnya. 
+                            <br><br> <b>3. Parameter Input/Output</b>
+                            <br>
+                            <img src="images/Prosedur2.3.png" alt="Gambar Flow 1.2" style="width: 50%; " >
+                            <br>
+                            Parameter output yang juga sekaligus menjadi parameter input (sebagai masukan sekaligus keluaran bagi prosedur tersebut). Parameter ini pastilah sudah jelas isinya ketika memasuki prosedur, karena dia juga berperan sebagai parameter input. Isi yang terdapat pointer adalah parameter input yang menerima alamat dari variabel-variabel yang akan ditukar nilainya. Disisi lain, isi yang terdapat pointer adalah parameter output yang akan mengubah nilai yang ada pada main.
+                            <br>
+                            <br>
+                            <b><span class="judul-sub">Perbedaan Passing Parameter by Value dan Passing Parameter by Reference</span></b>
+                            <br> <b>1. Passing Parameter by Value</b>
+                            <br>
+                            <img src="images/Prosedur2.4.png" alt="Gambar Flow 1.2" style="width: 50%; " >
+                            <br>
+                            Pada passing by value, nilai dari parameter akan disalin ke dalam variabel baru yang berada di dalam prosedur. Ini artinya, ketika nilai parameter diubah di dalam prosedur, nilai variabel asli di luar prosedur tidak akan berubah.
+                            <br><br> <b>2. Passing Parameter by Reference</b>
+                            <br>
+                            <img src="images/Prosedur2.5.png" alt="Gambar Flow 1.2" style="width: 50%; " >
+                            <br>
+                            Pada passing parameter by reference, alamat memori dari variabel akan disalin ke dalam prosedur, bukan nilai dari variabel itu sendiri. Ini artinya, ketika nilai parameter diubah di dalam prosedur, nilai variabel asli di luar prosedur juga akan berubah.
+                            <br><br>
+                            <b><span class="judul-sub">Apakah bisa memanggi Prosedur oleh Prosedur lain?</span></b>
+                            <br>Tentu bisa, suatu prosedur bukan merupakan program yang berdiri sendiri sehingga tidak dapat dieksekusi secara langsung ketika program dijalankan (berbeda dengan main program). Untuk itu suatu prosedur memerlukan sebuah pemanggil. Prosedur dapat dipanggil darimana saja, dari main() function, dari fungsi lain, maupun dari prosedur lain. Pemanggilan dari main() function telah dipelajari pada modul sebelumnya. Materi fungsi akan didapatkan pada modul selanjutnya. Kali ini, pembahasan akan berfokus pada pemanggilan prosedur oleh prosedur lain. Contohnya dapat dilihat pada gambar dibawah.
+                            <br>
+                            <img src="images/Prosedur2.6.jpg.png" style="width: 50%" alt="Gambar Flow 1.2">
+                            <br>Pada prosedur akumulasi, hasil sudah ada isi/nilainya, hendak diakumulasikan dengan delta. delta sudah terdefinisi dan ada isi/nilainya juga. Kemudian, hasil akan ketambahan sebesar delta. Isi/nilai dari delta tetap. Pada prosedur kenaikanGaji, gaji sudah ada isinya, hendak diakumulasikan dengan persenKenaikan dikalikan gaji. persenKenaikan sudah terdefinisi dan ada isi/nilainya juga. Kemudian, gaji akan ketambahan sebesar persenKenaikan dikalikan gaji. Isi/nilai dari persenKenaikan tetap.
+                            <br><br>Apakah kalian melihat adanya struktur yang sama pada isi prosedur akumulasi dan kenaikanGaji? Jika kalian melihat dan mencermati, *gaji = (*gaji) + kenaikan; pada isi prosedur kenaikanGaji memiliki struktur yang sama dengan isi pada prosedur akumulasi.
+                            <br><br>Ini menunjukkan adanya ketidakefektifan karena adanya code yang ditulis berulang - ulang. Lalu bagaimana mengatasinya? Adalah dengan memanggil prosedur akumulasi yang sudah dibuat sebelumnya.
+                            <br><br>
+                            <b><span class="judul-sub">Beberapa Hal Yang Harus Diperhatikan Pada Prosedur</span></b>
+                            <br><b>1.	Pemanggilan prosedur harus berdiri sendiri sebagai sebuah statement merdeka, tidak boleh ditempelkan pada statement lain.</b>
+                            <br>
+                                <img src="images/Prosedur2.7.png" alt="Gambar Flow 1.2" style="width: 50%;" >
+                            <br>
+                            <br><b>2.	Nama prosedur baik saat pemanggilan, pendeklarasian, maupun saat pendefinisian merupakan case sensitive</b>
+                            <br>
+                                <img src="images/Prosedur2.8.png" alt="Gambar Flow 1.2" style="width: 50%; " >
+                            <br>
+                            <br><b>3.	Nama variabel di parameter actual dan parameter formal dapat berbeda maupun sama. Namun untuk tipe datanya harus sama.</b>
+                            <br>
+                                <img src="images/Prosedur2.9.png" alt="Gambar Flow 1.2" style="width: 50%;" >
+                            <br>
+                            <br><b>4.	Jumlah parameter, tipe data, dan urutan parameter harus sama baik di parameter aktual maupun parameter formal.</b>
+                            <br>
+                                <img src="images/Prosedur2.10.png" alt="Gambar Flow 1.2" style="width: 50%;" >
+                            <br>
+                          
+                        </span>
+                        
+                    </p>
+
+                    <button onclick="modulToggle(8)" id="myBtn-8" class="btn-more">Read More</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modul 9 -->
+        <div class="blog-main" id="module9">
+            <div class="main-part" id="main9">
+                <div class="img-wrapper" id="imgWrapper-9">
+                    <img src="images/banner-modul9.jpeg" alt="Fungsi" class="modul-img" id="mainImg-9" />
+                </div>
+                <div class="cont-text">
+                    <h2>Modul 9 - Fungsi</h2>
+                    
+                    <p>
+                        <span class="judul-sub">Pengenalan Fungsi</span><br>
+                        <b>Fungsi</b> adalah sub-program yang bisa digunakan kembali baik di dalam program itu sendiri, maupun di program lain. Salah satu fungsi yang kita selalu buat selama ini adalah fungsi “main”. Fungsi dan prosedur memiliki perbedaan yaitu fungsi perlu untuk mengambil data, memproses data, dan mengembalikan data. Namun,
+                        <span id="dots-9" style="font-weight: bold">....</span>
+                        <span id="more-9" class="more-content">
+                            keduanya sama-sama dapat digunakan berkali-kali dan mempunyai tujuan yaitu mempunyai tujuan utama yaitu membuat kode menjadi lebih rapi dan efisien.
+                            <br>
+                            <br>
+                            <span class="judul-sub">Struktur Fungsi</span>
+                            <br>Pada struktur fungsi hampir sama dengan prosedur dimana perbedaan utamanya pada tipe data yang ingin dibalikkan. Prosedur menggunakan tipe data balikkan void (ruang kosong). dalam fungsi tipe data balikannya adalah tipe data (contoh : int, float, string, dll) sesuai dengan kebutuhan.
+                            <br>
+                                <img src="images/Fungsi 1.png" alt="Gambar Flow 1.2" style="width: 50%; " >
+                            <br>
+                            1. <b>Tipe Data</b> : merupakan tipe data balikan fungsi atau tipe data yang dipakai untuk mengembalikkan data.
+                            <br>2. <b>Nama Fungsi</b> : seperti dalam prosedur nama fungsi dipakai untuk mendeklarasikan fungsi sekaligus untuk pemakaiannya di main dan bersifat case sensitive dan mengikuti format pada umumnya.
+                            <br>3. <b>Parameter</b> : pengertian dan kegunaan parameter fungsi sama dengan parameter prosedur. Akan tetapi, parameter pada fungsi hanya berlaku inputan dan tidak ada parameter output.
+                            <br>4. <b>Function Body</b> :  Isi atau body dari fungsi yang ingin dibuat yang berisi kode dan syntax yang relevan dan akan dipakai di dalam Fungsi. 
+                            <br>5. <b>Return</b> : merupakan syntax yang harus ada dan wajib dalam setiap fungsi, dimana digunakan untuk mengembalikan sebuah nilai atau nilai dari hasil operasi fungsi tersebut. 
+                            <br><br>
+                            Contoh Pemakaian Fungsi:
+                            <br>
+                                <img src="images/Fungsi 2.png" alt="Gambar Flow 1.2" style="width: 50%; " >
+                            <br>
+                            <b>Diperhatikan bahwa Fungsi selalu diakhiri dengan “return” !</b>
+                            <br><br>
+                            <b><span class="judul-sub">Apa saja perbedaan Fungsi dan Prosedur?</span></b><br>
+                                <img src="images/Fungsi 3.jpg" alt="Gambar Flow 1.2" style="width: 50%; " >
+                        </span>    
+                    </p>
+
+                    <button onclick="modulToggle(9)" id="myBtn-9" class="btn-more">Read More</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modul 10 -->
+        <div class="blog-main" id="module10">
+            <div class="main-part" id="main10">
+                <div class="img-wrapper" id="imgWrapper-10">
+                    <img src="images/banner-modul10.jpeg" alt="Array" class="modul-img" id="mainImg-10" />
+                </div>
+                <div class="cont-text">
+                    <h2>Modul 10 - Array</h2>
+                    
+                    <p>
+                        <span class="judul-sub">Pengenalan Array</span><br>
+                        <b>Array</b> adalah stuktur data yang memungkinkan kita untuk menyimpan sekumpulan data dalam satu variabel yang sama sehingga tidak perlu membuat banyak variabel. Sederhananya array merupakan sebuah tempat atau merupakan wadah untuk menyimpan lebih dari satu data. Hal-hal yang perlu dipahami tentang 
+                        <span id="dots-10" style="font-weight: bold">....</span>
+                        <span id="more-10" class="more-content">
+                            array :
+                            <br><b>1. Array dapat menyimpan lebih dari satu data dengan tipe data yang sama. 
+                            <br>2. Ukuran dari array harus ditentukan saat pendeklarasiannya, sehingga perlu diketahui terlebih dahulu berapa maksimal data yang ingin ditampung di dalam variabel array. 
+                            <br>3. Array bersifat static, artinya ukuran dari array tidak bisa berubah seiring berjalannya program. 
+                            <br>4. Data pada array diakses menggunakan index, index adalah angka bilangan bulat dan index pada array dimulai dari 0 kemudian 1, 2 , 3 dan seterusnya.</b>
+                            <br><br>
+                            Visualisasi Array:
+                            <br>
+                            <img src="images/Array 1.png" alt="Gambar Flow 1.2" style="width: 50%;">
+                            <br>
+                            Contoh di atas merupakan array bernama ‘bil’ bertipe data integer dan menampung 5 data bilangan bulat.
+                            <br><br>
+                            <span class="judul-sub">Jenis-Jenis Array</span>
+                            <br><b>1. Array Satu Dimensi</b>
+                            <br>Array satu dimensi merupakan array yang menyimpan satu deret nilai yang bertipe sama dan array ini hanya dideklarasikan satu dimensi saja. Contoh penggunaan array satu dimensi yaitu untuk menyimpan daftar nama mahasiswa, daftar npm, daftar harga, dll.
+                            <br><b>2. Array Multidimensi</b>
+                            <br>Array multidimensi adalah array yang memiliki ukuran dimensi lebih dari satu. Biasanya array multidimensi yang sering dipakai adalah array yang berukuran 2. Untuk array yang berukuran selebihnya jarang digunakan. Contoh penggunaan array berukuran 2 dimensi pada C adalah membuat peta game 2 dimensi atau membuat index posisi.
+                            <br><br>
+                            <span class="judul-sub">Jadi Bagaimana Cara Menggunakan Array?</span>
+                            <br><b>1. Deklarasi Array</b>
+                            <br>Berikut struktur yang digunakan untuk mendeklarasikan variabel array:
+                            <br>
+                                <img src="images/Array 2.png" alt="Gambar Flow 1.2" style="width: 50%; ">
+                            <br>
+                            <br>
+                                <img src="images/Array 3.png" alt="Gambar Flow 1.2" style="width: 50%; ">
+                            <br>
+                            Pada gambar diatas kita mendeklarasikan 4 variabel array. Variabel array pertama sampai
+                            variabel array ketiga adalah array 1 dimensi. Dan variabel array keempat adalah array 2
+                            dimensi. Saat mendeklarasikan variabel array kita harus menentukan tipe datanya seperti saat
+                            mendeklarasikan variabel biasa. Namun, pada variabel array kita menambahkan kurung siku
+                            yang di dalamnya terdapat bilangan bulat. Bilangan bulat tersebut menandakan ukuran atau
+                            banyak data yang ingin ditampung pada variabel array tersebut.
+                            <br>
+                            <br><b>2. Inisialisasi Array</b>
+                            <br>Terdapat dua cara untuk melakukan inisialisasi variabel array, yaitu:
+                            <br><b>1. Cara Manual</b>
+                            <br>
+                                <img src="images/Array 4.png" alt="Gambar Flow 1.2" style="width: 50%;">
+                            <br>
+                            Cara yang pertama ini kita langsung mengisi data pada variabel array ketika dideklarasikan.
+                            Cara ini digunakan ketika kita sudah mengetahui nilai/data yang akan diisi. Sehingga kita dapat
+                            mengisi data yang kita inginkan sebelum program dijalankan dan data yang diisi harus sesuai
+                            dengan tipe datanya.
+                            <br><br><b>2. Menggunakan Perulangan</b>
+                            <br>
+                                <img src="images/Array 5.png" alt="Gambar Flow 1.2" style="width: 50%; ">
+                            <br>
+                            Pada contoh gambar tersebut, kita mendeklarasikan variabel array bertipe data float dengan ukuran 10 yang diberi nama desimal. Kemudian di bawahnya, dilakukan perulangan dari 0 sampai 9 (array ukuran 10 berarti memiliki index dari 0 sampai 9) dan mengisi variabel array dengan data 0.0.
+                            <br><br><b>3. Pengaksesan Array</b>
+                            <br>Setelah mendeklarasikan variabel array, kita akan mengakses data pada variabel array agar
+                            datanya bisa diubah atau ditampilkan. Untuk mengakses data pada variabel array kita
+                            membutuhkan index dari array tersebut.
+                            <br>
+                                <img src="images/Array 6.png" alt="Gambar Flow 1.2" style="width: 50%;">
+                            <br>
+                            <b>Perlu diperhatikan</b> bahwa saat mengakses data pada variabel array, angka di dalam kurung
+                            siku menyatakan index. Sedangkan saat deklarasi variabel array, angka tersebut menyatakan
+                            ukuran variabel array.
+                            <br><br><span class="judul-sub">Apakah Array bisa digunakan dalam Prosedur dan Fungsi?</span>
+                            <br>Tentu, penggunaan Array pada Prosedur dan Fungsi sebenarnya sama saja seperti biasa, yang beda hanya cara menulis parameternya, ada penambahan tanda kurung siku ( [ ] ) setelah penamaan parameter.
+                            Dapat dilihat pada gambar dibawah.
+                            <br>
+                                <img src="images/Array 7.png" alt="Gambar Flow 1.2" style="width: 50%">
+                            <br>
+                            Ketika sebuah variabel array dipassing ke dalam sebuah prosedur atau fungsi, sifatnya sudah
+                            berbentuk passing by reference, serupa dengan parameter input output dan tidak memerlukan
+                            (*) karena bentuk dari array sebenarnya adalah sebuah pointer (*). Oleh karena itu, perubahan
+                            data pada variabel array di dalam fungsi/prosedur juga akan mengubah data pada variabel array
+                            di main() program.
+                        </span>
+                        
+                    </p>
+
+                    <button onclick="modulToggle(10)" id="myBtn-10" class="btn-more">Read More</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modul 11 -->
+        <div class="blog-main" id="module11">
+            <div class="main-part" id="main11">
+                <div class="img-wrapper" id="imgWrapper-11">
+                    <img src="images/banner-modul11.jpeg" alt="Record" class="modul-img" id="mainImg-11" />
+                </div>
+                <div class="cont-text">
+                    <h2>Modul 11 - Record</h2>
+                    
+                    <p>
+                        <span class="judul-sub">Pengenalan Record</span><br>
+                        <b>Record atau Struct</b> adalah salah satu tipe data selain array yang dapat menampung lebih dari 1 tipe data. Perbedaan antara array dan record adalah setiap data yang tersimpan dalam array harus memiliki tipe data yang sama, sedangkan dalam record, tipe datanya dapat berbeda.
+                        <span id="dots-11" style="font-weight: bold">....</span>
+                        <span id="more-11" class="more-content">
+                            <br>
+                            <br>
+                            <span class="judul-sub">Mengapa kita membutuhkan record atau struct ?</span>
+                            <br>
+                            <span style="display: block; text-align: center;">
+                                <img src="images/Record 1.png" alt="Gambar Flow 1.2" style="width: 50%;">
+                                <br>Gambar 1
+                            </span>
+                            <b>Gambar 1</b> merupakan cara kita ketika ingin menyimpan sebuah data mahasiswa.<b> Bagaimana jika kita ingin menyimpan data lebih dari 1 mahasiswa?</b>
+                            
+                            <span style="display: block; text-align: center;">
+                                <br><img src="images/Record 2.png" alt="Gambar Flow 1.2" style="width: 50%;" >
+                                <br>Gambar 2
+                            </span>
+                          
+                            Solusinya adalah menambahkan angka pada akhir setiap tipe data seperti<b> Gambar 2</b>. Cara ini memang dapat digunakan, namun semakin banyak data dan jumlah mahasiswa yang dibutuhkan, maka akan semakin banyak pula variable yang diperlukan.<b> Akibatnya kode kita menjadi semakin panjang, tidak efektif, dan tidak efisien.</b>
+                            <br>
+                            <br><span class="judul-sub">Sekarang kita satukan menggunakan Record</span>
+                            <br>
+
+                            <span style="display: block; text-align: center;">
+                                <img src="images/Record 3.png" alt="Gambar Flow 1.2">
+                                <br>Gambar 3
+                            </span>
+                            Dari potongan kode pada <b>Gambar 3</b>, Kita sudah mengatasi masalah-masalah yang diatas. Kita telah membuat tipe data buatan struct baru yang bernama <b>Mahasiswa</b> dan didalam terdapat <b>int umur_mahasiswa, string nama_mahasiswa, string npm_mahasiswa</b> yang disebut sebagai <span style="font-weight: bold">Field</span>. Kemudian untuk menambahkan 3 orang mahasiswa, kita cukup mendeklarasikan tipe data <span style="font-weight: bold">Mahasiswa</span> di main dan memberi nama variabel tersebut, contohnya <b>M1, M2, dan M3</b>, sama seperti tipe data lain.
+                           
+                            <br>
+                            <br><span class="judul-sub">Cara kita mengakses Record/Struct</span>
+                            <br>
+
+                            <span style="display: block; text-align: center;">
+                                <img src="images/Record 4.png" alt="Gambar Flow 1.2" style="width: 50%;" >
+                                <br>Gambar 4
+                            </span>
+                            
+                            Field-field di dalam record dapat kita akses dengan memanggil variabel record, diikuti tanda titik (<b>.</b>) dan  diakhiri dengan nama field di dalam record tersebut.
+                            
+                            <span style="display: block; text-align: center;">
+                                <br><img src="images/Record 5.png" alt="Gambar Flow 1.2" style="width: 50%;">
+                                <br>Gambar 5
+                            </span>
+
+                            
+                            Pada <b>Gambar 5</b> ada beberapa pengaksesan dan modifikasi yang dapat dilakukan dalam record <b>Mahasiswa</b>.
+
+                            <br>
+                                <br><span class="judul-sub">Pengaksesan Record/Struct pada prosedur yang menggunakan pointer</span>
+                            <br>
+
+                            <span style="display: block; text-align: center;">
+                                <img src="images/Record 6.png" alt="Gambar Flow 1.2" style="width: 50%;">
+                                <br>Gambar 6
+                            </span>
+                       
+                            Pada <b>Gambar 6</b> kita dapat mengakses field pada struct pointer dengan menggunakan dot operator (<b>.</b>) ataupun arrow operator (<b>-></b>).
+
+                            <br><br>
+                                <span class="judul-sub">Nested Struct</span>
+                            <br>
+
+                            <span style="display: block; text-align: center;">
+                                <br><img src="images/Record 7.png" alt="Gambar Flow 1.2" style="width: 50%;">
+                                <br>Gambar 7
+                            </span>
+                            Kita akan membuatkan record <b>Mahasiswa</b> dan <b>DosenPembimbing</b>. Dimana setiap mahasiswa hanya memiliki 1 dosen pembimbing. Untuk mengakses anggota dari Nested Struct, kita dapat menggunakan notasi titik berantai. Misalnya untuk mengakses nama_dospem dari dospem dalam mahasiswa, kita menggunakan mahasiswa.dospem.nama_dospem seperti kode pada <b>Gambar 7</b>.
+
+                            <br>
+                            <br><span class="judul-sub">Apakah bisa kita membuat Record/Struct tanpa typedef?</span>
+                            <br><b>Jawabannya bisa</b>, terdapat dua cara dalam menggunakan record/struct, yaitu : 
+                            <br>1. Menggunakan typedef
+                            <br>2. Tanpa menggunakan typedef
+                            <br><br>
+                            <span class="judul-sub">PERBEDAAN TANPA TYPEDEF & DENGAN TYPEDEF</span>
+                            <br>
+                            <img src="images/Record 8.jpg" style="width: 50%" alt="Gambar Flow 1.2">
+                            <br>
+                            Dari perbedaan diatas kita dapat mengetahui bahwa kata kunci typedef adalah kata kunci untuk membuat tipe data baru di C. Saat kita menggunakan typedef untuk struct, maka struct tersebut akan dikenali sebagai tipe data. 
+                            Sehingga saat menggunakan struct, kita tidak perlu lagi pakai kata kunci struct.
+                        </span>
+                        
+                    </p>
+
+                    <button onclick="modulToggle(11)" id="myBtn-11" class="btn-more">Read More</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modul 12 -->
+        <div class="blog-main" id="module12">
+            <div class="main-part" id="main12">
+                <div class="img-wrapper" id="imgWrapper-12">
+                    <img src="images/banner-modul12.jpeg" alt="AOR" class="modul-img" id="mainImg-12" />
+                </div>
+                <div class="cont-text">
+                    <h2>Modul 12 - Array of Record</h2>
+                    
+                    <p>
+                        <span class="judul-sub">Pengelanan Array of Record</span><br>
+                        <b>Array of Record</b> merupakan gabungan dari Array dan Record. Seperti yang telah dijelaskan pada modul-modul sebelumnya yaitu Array dan Record, kita telah memahami bersama bahwa Array merupakan sekumpulan variabel dengan tipe data yang sama yang disimpan secara berurutan dan 
+                        <span id="dots-12" style="font-weight: bold">....</span>
+                        <span id="more-12" class="more-content">
+                            diakses dengan menggunakan index, yang  merupakan angka yang menunjukkan posisi elemen tersebut dalam urutan penyimpanan. Sementara itu, Record merupakan sebuah tipe data bentukan yang berisi kumpulan item atau atribut dengan tipe data yang mungkin berbeda-beda. Kita juga bisa
+                            menerapkan Array pada Record, di mana akan ada sekumpulan variabel dengan tipe data
+                            bentukan yang disimpan secara berurutan.
+                            <br><br><b>Ini Array</b>
+                            <br>
+                                <img src="images/Array 1.png" alt="Gambar Flow 1.2" style="width: 50%; ">
+                                
+                            <br>
+                            <br><b>Ini Record</b>
+                            <br>
+                                <img src="images/AOR 1.png" alt="Gambar Flow 1.2" style="width: 50%; ">
+                            <br>
+                            <br>Dua konsep ini kan hal lumayan berbeda ya? Trus nyambungnya di mana
+                            sampai akhrinya jadi Array of Record? Mari kita lihat gambar dibawah ini.
+                            <br>
+                                <img src="images/AOR 2.png" alt="Gambar Flow 1.2" style="width: 50%;">
+                            <br>
+                            Berdasarkan gambar diatas, dapat diketahui kita telah memiliki sebuah tipe data bentukan (Record) Mahasiswa dengan atribut nama, NPM, dan IPK. Kemudian, kita membuat variabel bertipe-data Mahasiswa untuk menampung data mahasiswa. Tapi, apa jadinya kalau kita mau membuat 100 data Mahasiswa? 
+                            Tentunya kita capek untuk menuliskannya satu-satu. Maka dari itu, kita akan menggunakan sebuah konsep baru yaitu <b>Array of Record (AoR)</b> untuk memudahkan persoalan tersebut.
+                            <br><br><b><span class="judul-sub">Bagaimana Cara Menggunakan AoR?</span></b>
+                            <br><b>1. Deklarasi</b>
+                            <br>Pendeklarasian dalam Array of Record sama dengan pendeklarasian pada array yaitu dengan rumus : 
+                            <br><b>TipeData namaVariabel[isiArray];</b>
+                            <br>Karena perilaku yang sama terhadap tipe data bentukan, kita dapat mendeklarasikan 100 variabel Mahasiswa seperti mendeklarasikan array pada umumnya, seperti contoh di bawah ini.
+                            <br>
+                            <img src="images/AOR 3.jpg" alt="Gambar Flow 1.2" style="width: 50%;">
+                            <br>
+                            <br><b>2. Mengakses Index Pada Array of Record</b>
+                            <br>Pengaksesan index pada Array of Record sama seperti Array pada umumya. Yang menjadi pembeda dengan Array bertipe data primitif adalah adanya tambahan field Record yang akan diakses, seperti mengakses field dalam Record yang menggunakan tanda titik ( . ) .Mengakses index pada Array of Record menggunakan rumus
+                            <br><b>namaVariabel[index].field;</b>
+                            <br>
+                                <img src="images/AOR 4.jpg" alt="Gambar Flow 1.2" style="width: 50%;">
+                            <br>
+                            <br><b>Perhatikan</b> cara mengakses Array of Record di atas. Setelah pemangglian nama variabel array, harus diikuti dengan kurung siku ( [ ] ) beserta index dari array yang mau diakses (0 … n). Kemudian, diikuti dengan tanda titik ( . ) yang otomatis akan menampilkan field yang dapat di akses. Kalian dapat melihat cara mengakses field pada
+                            Array of Record pada gambar di bawah.
+                            <br>
+                            <img src="images/AOR 5.png" alt="Gambar Flow 1.2" style="width: 50%;">
+                            <br>
+                            Mari kita analisa potongan code di atas. Pertama, kita melakukan deklarasi struct
+                            Mahasiswa dengan field string nama, int npm, dan float ipk. Kemudian
+                            dideklarasikan sebuah Array of Record mahasiswa[100]. Setelah Array of Record
+                            mahasiswa dideklarasikan, dilakukan deklarasi variabel int index yang diassign dengan
+                            nilai 0. Nantinya, variabel index ini akan menunjukkan "index" dari mahasiswa yang akan
+                            diakses dan di-increment agar kita dapat mengakses variabel pada "index" berikutnya.
+                            <br><br><b>3. Pengisian dan Pengubahan Data</b>
+                            <br>Sama seperti cara mengakses index di poin sebelumnya, mengisi nilai atau
+                            mengubah nilai yang ada pada Array of Record bisa dengan menggunakan rumus:
+                            <br><b>namaVariabel[index].field = nilaiBaru;</b>
+                            <br>Atau
+                            <br><b>strcpy(namaVariabel[index].field, nilaiStringBaru);</b>
+                            <br><br><b>4. Penggunaan Perulangan dalam Array of Record</b>
+                            <br>Dalam Array of Record, kita dapat menggunakan perulangan untuk memudahkan dalam memodifikasi atau menampilkan nilai field seperti gambar dibawah ini.
+                            <br>
+                                <img src="images/AOR 6.png" alt="Gambar Flow 1.2" style="width: 50%;">
+                            <br>
+                            Kita menggunakan perulangan yang dimulai dari index ke-0 hingga index ke-4.
+                            Nilai index dalam kurung siku [ ] diganti dengan variabel i, sehingga program akan
+                            menampilkan nilai mahasiswa sesuai dengan nilai index i dan bertambah seiring
+                            berjalannya perulangan.
+                            <br><br><b><span class="judul-sub">Apakah AoR bisa didalam AoR?</span></b>
+                            <br>Bisa banget! Array of Record di dalam Record adalah sebuah kondisi dimana suatu record memiliki atribut atau field yang berupa array of record. Mari kita bahas satu per satu.
+                            <br><br><b>1. Deklarasi</b>
+                            <br>Untuk memudahkan pemahaman kalian, coba lihat ilustrasi di bawah ini.
+                            <br>
+                            <img src="images/AOR 7.png" alt="Gambar Flow 1.2" style=" width: 50%; ">
+                            <img src="images/AOR 8.jpg" alt="Gambar Flow 1.2" style=" width: 50%; ">
+                            <br>Dari gambar diatas terdapat Array of Record MataKuliah matkul[5] di dalam Mahasiswa. Simpelnya, dapat kita simpulkan bahwa “Mahasiswa memiliki atribut berupa nama, NPM, IPK, dan 5 MataKuliah, di mana MataKuliah memiliki 2 atribut yaitu namaMataKuliah dan jumlahSKS.”
+                            Penting untuk diperhatikan juga bahwa struct yang akan menjadi Array of
+                            Record di dalam record lainnya harus dideklarasikan terlebih dahulu agar dapat
+                            dikenali oleh program karena program berjalan secara sekuensial (eksekusi dari line
+                            paling atas ke line paling bawah). Kemudian, struct yang akan menjadi AoR dalam
+                            record lain tinggal dideklarasikan seperti AoR pada umumnya sesuai dengan penjelasan
+                            yang ada sebelumnya.
+                            <br><br><b>2. Pengaksesan index</b>
+                            <br>Pengaksesan index AoR dalam AoR tidak berbeda jauh dari pemanggilan AoR
+                            biasa. Akan tetapi, perlu diperhatikan karena kalian akan mengakses melalui 2 buah
+                            array, maka harus menggunakan pengaksesan array 2 kali pula.
+                            <br>
+                            <img src="images/AOR 9.png" alt="Gambar Flow 1.2" style="width: 50%; ">
+                            <br>
+                            Pada gambar di atas, kita dapat melihat bentuk pengaksesan Array of Record
+                            dalam Array of Record. Penting untuk diperhatikan, pengaksesan atribut di dalam record
+                            selalu diikuti dengan tanda titik (.). Setelah mengakses Array of Record pertama dan
+                            memberikan kurung siku [ ] untuk mengakses index, harus dilanjutkan dengan tanda titik
+                            lagi untuk bisa mengakses Array of Record kedua.
+                            <br><br><b>3. Pengisian dan Pengubahan Data</b>
+                            <br>Pengisian dan Pengubahan data di sini sama saja seperti pengisian dan
+                            pengubahan data pada Array of Record biasa.
+                            <br><br><b>4. Perulangan untuk AoR dalam AoR</b>
+                            <br>Perlu dipahami bahwa perulangan digunakan untuk mengakses index dari array.
+                            Karena di konsep AoR dalam AoR akan ada dua array yang kalian akses, maka kita akan
+                            menggunakan nested loop untuk mengakses field dari AoR dari sebuah AoR. Konsep ini
+                            seringkali digunakan untuk inisialisasi dan pencarian di konsep AoR dalam AoR.
+                            <br>
+                                <img src="images/AOR 10.jpg" alt="Gambar Flow 1.2" style="width: 50%;">
+                            <br>
+                            <br><b>5. Penerapan Fungsi dan Prosedur pada Array of Record</b>
+                            <br>Pada modul-modul sebelumnya (array dan record) tentu kalian sudah mempelajari
+                            bagaimana cara menerapkan fungsi serta prosedur dalam array maupun record. Penerapan
+                            fungsi dan Prosedur dalam modul kali ini tidak akan jauh berbeda. Kalian tinggal
+                            mengkombinasikan kedua hal tersebut dan menggunakannya pada program kalian.
+                            Misalnya, berikut ini adalah contoh bagaimana kalian akan menginisialisasi (set semua
+                            nilai pada AoR menjadi kosong) dalam Array of Record.
+                            <br>
+                            <img src="images/AOR 11.jpg" alt="Gambar Flow 1.2" style="width: 50%; ">
+                            <br>
+
+                        </span>
+                        
+                    </p>
+
+                    <button onclick="modulToggle(12)" id="myBtn-12" class="btn-more">Read More</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+    <script src="js/greet.js"></script>
+    <script src="js/time.js"></script>
+    <script src="js/module.js"></script>
+
 </body>
 </html>
