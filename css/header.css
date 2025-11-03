@@ -1,0 +1,29 @@
+/* ========== Header ========== */
+.topbar {
+  background-color: #e5e3df;
+  border-bottom: 1px solid;
+  display: flex;
+  /* font-weight: bold; */
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 30px;
+  position: relative;
+  font-family: 'Baloo Tamma', sans-serif;
+  color: #1a2a4f;
+}
+
+.header-img {
+  height: 50px; 
+}
+
+.greet {
+  font-size: 30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.time {
+  font-size: 24px;
+}

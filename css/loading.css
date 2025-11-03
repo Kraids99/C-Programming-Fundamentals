@@ -1,0 +1,41 @@
+body, html {
+  height: 100%;
+  margin: 0;
+  background-color: #0e0e0e;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+p {
+  color: #ccc;
+  margin-top: 30px;
+  font-size: 18px;
+}
+
+.loader {
+  width: 60px;
+  height: 60px;
+  border: 8px solid #00d8ff;
+  justify-content: center;
+  align-items: center;
+  animation: spin 1.2s linear infinite;
+}
+
+.loader-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}

@@ -1,0 +1,175 @@
+/* SECTION UTAMA */
+.module-section {
+  width: 100%;
+  background-color: #e5e3df;
+}
+
+/* GAMBAR MODUL */
+.modul-img {
+  width: 350px;
+  height: auto;
+  display: block;
+  margin: 0;
+  transition: transform 0.5s ease, margin 0.5s ease;
+  transform: scale(1);
+  transform-origin: center center; /* 🔥 penting: biar ngezoom tetap dari tengah */
+}
+
+.main-part.readmore-active {
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.5s ease;
+}
+
+.img-wrapper {
+  flex-shrink: 0;
+  transition: all 0.5s ease;
+}
+
+.img-wrapper.centered {
+  justify-content: center;
+  width: 100%;
+  display: flex;
+  transition: all 0.5s ease;
+}
+
+.centered-zoom {
+  transform: scale(1.08);
+  margin: 0 auto;
+}
+
+/* KONTEN READ MORE */
+.more-content {
+  display: none;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* HEADER UTAMA */
+.module-section h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* SEARCH BAR */
+.search-container {
+  text-align: center;
+  margin: 20px 0;
+  
+}
+
+.search-container input {
+  width: 60%;
+  padding: 10px 40px 10px 40px; /* biar ada ruang kiri untuk icon */
+  border-radius: 25px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  background-image: url('/webdaspro/images/search.png');
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-position: 12px center;
+}
+
+/* MODULE CONTAINER */
+#moduleContainer {
+  padding: 20px;
+}
+
+.blog-main {
+  background: #fff;
+  border-radius: 15px;
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 90%;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
+.main-part {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.cont-text {
+  flex: 1;
+  padding-right: 10px;
+  text-align: justify;
+}
+
+.cont-text h2 {
+  margin: 0;
+  font-size: 24px;
+  border-bottom: 2px solid #333;
+  padding-bottom: 5px;
+}
+
+.judul-sub {
+  margin-top: 20px;
+  font-size: 20px;
+  color: #273248;
+  font-weight: bold;
+}
+
+.cont-text p {
+  line-height: 1.7;
+  margin-top: 10px;
+}
+
+.btn-more {
+  background-color: #f57c00;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  padding: 10px 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  margin-top: 15px;
+}
+
+.btn-more:hover {
+  background-color: #ef6c00;
+}
+
+/* CTA BUTTON (Floating) */
+.cta {
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 1000;
+}
+
+.cta img {
+  width: 30px;
+  height: 30px;
+}
+
+.cta.hide {
+  display: none;
+}
+
+.cta.show {
+  display: block;
+}
+
+/* RESPONSIF */
+@media (max-width: 768px) {
+  .main-part {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .search-container input {
+    width: 90%;
+  }
+
+  .modul-img {
+    max-width: 100%;
+  }
+}
